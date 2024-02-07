@@ -1,0 +1,155 @@
+    1  pwd
+    2  mkdir newfolder
+    3  ls
+    4  rmdir newfolder/
+    5  ls
+    6  exit
+    7  passwd
+    8  ls
+    9  help
+   10  ls
+   11  wget http://www.github.com/
+   12  ls
+   13  vi index.html
+   14  quit
+   15  exit
+   16  cd ~/.ssh
+   17  mkdir ~/.ssh
+   18  ls
+   19  cd ~/.ssh
+   20  cat id_rsa.pub
+   21  cd ..
+   22  cat id_rsa.pub
+   23  cd /.ssh
+   24  cd ~/.ssh
+   25  ssh-keygen
+   26  ls
+   27  cat 'cat id_sra.pub'
+   28  cat 'cat id_rsa.pub'
+   29  ls
+   30  cat 'cat id_rsa.pub.pub'
+   31  ls
+   32  del 'cat id_rsa.pub'
+   33  rm 'cat id_rsa.pub'
+   34  rm 'cat id_rsa.pub.pub'
+   35  ls
+   36  ssh-keygen
+   37  ls
+   38  cat id_rsa.pub
+   39  cd ..
+   40  mkdir repos
+   41  cd repos
+   42  mkdir sampleProject
+   43  cd sampleProject
+   44  ls -ltr
+   45  touch sampleFile.txt
+   46  ls
+   47  git init
+   48  git add .
+   49  git status
+   50  git config --global user.email
+   51  git config --global user.email jonathan.sthomas@icloud.com
+   52  git config --global user.name Eometheous
+   53  git config --global user.email
+   54  git config --global user.name
+   55  git remote add origin git@github.com:jyotikahp/DemoRepoForCS131.git
+   56  git commit -m "Initial Commit from VM"
+   57  git push --set-upstream origin master
+   58  ls
+   59  exit
+   60  ls
+   61  cd repos/
+   62  ls
+   63  cd sampleProject/
+   64  ls
+   65  cat sampleFile.txt 
+   66  ls -l
+   67  cd ..
+   68  ls
+   69  mkdir test
+   70  ls
+   71  rmdir test
+   72  ls
+   73  cd ..
+   74  ls -help
+   75  ls --help
+   76  ls
+   77  cd repos
+   78  ls
+   79  cd sampleProject
+   80  ls
+   81  vi sampleFile.txt
+   82  cat sampleFile.txt 
+   83  vi sampleFile.txt 
+   84  ls
+   85  wget https://raw.githubusercontent.com/jyotikahp/DemoRepoForCS131/main/spotify-2023.csv
+   86  ls
+   87  wget
+   88  ls
+   89  pip
+   90  pip3
+   91  ls
+   92  head spotify-2023.csv 
+   93  tail spotify-2023.csv 
+   94  less spotify-2023.csv 
+   95  clear
+   96  ls
+   97  vi sampleFile.txt 
+   98  exit
+   99  ls
+  100  cd repos
+  101  ls
+  102  wget www.github.com
+  103  ls
+  104  rm index.html
+  105  ls
+  106  mkdir cs131
+  107  cd cs141
+  108  cd cs131
+  109  ls
+  110  mkdir Worksheet1
+  111  cd Worksheet1/
+  112  history > cmds.log
+  113  ls
+  114  cat cmds.log
+  115  git init
+  116  git add .
+  117  git commit -m "initial commit"
+  118  git push -u
+  119  git remote add Worksheet1
+  120  git push -u
+  121  git remote add origin https://github.com/Eometheous/testingCiscoAnyConnectVPN.git
+  122  git push -u origin main
+  123  git push -u origin master
+  124  git remote remove origin
+  125  clear
+  126  git remote add origin https://github.com/Eometheous/CS131-Worksheet1
+  127  git push -u origin master
+  128  git remote remove origin
+  129  git remote add origin git@github.com:Eometheous/CS131-Worksheet1.git
+  130  git push -u origin master
+  131  git remote remove origin
+  132  clear
+  133  ls
+  134  rm cmds.log
+  135  ls
+  136  cd ..
+  137  ls
+  138  rm Worksheet1/
+  139  rmdir Worksheet1/
+  140  cd Worksheet1/
+  141  ls - l
+  142  ls -l
+  143  cd ..
+  144  rm -d Worksheet1/
+  145  rmdir -d Worksheet1/
+  146  rmdir -r Worksheet1/
+  147  rmdir Worksheet1/
+  148  rm -rf Worksheet1/
+  149  ls
+  150  git init
+  151  git config --global init.defaultBranch main
+  152  git add .
+  153  mkdir Worksheet1
+  154  cd Worksheet1/
+  155  history > cmds.log
