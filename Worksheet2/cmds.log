@@ -1,0 +1,29 @@
+  302  cd repos/cs131/
+  303  ls
+  304  mkdir Worksheet2
+  305  wget https://raw.githubusercontent.com/jyotikahp/DemoRepoForCS131/main/Global%20YouTube%20Statistics.csv
+  306  ls
+  307  mv 'Global\ YouTube\ Statistics.csv' Worksheet2
+  308  mv 'Global\ YouTube\ Statistics.csv' /Worksheet2
+  309  rm 'Global YouTube Statistics.csv' 
+  310  ls
+  311  cd Worksheet2
+  312  wget https://raw.githubusercontent.com/jyotikahp/DemoRepoForCS131/main/Global%20YouTube%20Statistics.csv
+  313  ls
+  314  man grep
+  315  grep "United States" 'Global YouTube Statistics.csv' 
+  316  ls
+  317  grep "Music" 'Global YouTube Statistics.csv' 
+  318  grep "Music" 'Global YouTube Statistics.csv' | wc 'Global YouTube Statistics.csv' 
+  319  wc 'Global YouTube Statistics.csv' 
+  320  grep "Music" 'Global YouTube Statistics.csv' | wc
+  321  grep "United States" 'Global YouTube Statistics.csv' > counts.txt
+  322  ls
+  323  vi counts.txt 
+  324  grep "Music" 'Global YouTube Statistics.csv' | wc >> counts.txt 
+  325  vi counts.txt 
+  326  grep "Music" 'Global YouTube Statistics.csv'  >> counts.txt 
+  327  grep "Music" 'Global YouTube Statistics.csv' | wc >> counts.txt 
+  328  vi counts.txt 
+  329  ls
+  339  history | tail -50 > cmds.log 
