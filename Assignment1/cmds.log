@@ -1,0 +1,66 @@
+Task 1
+  401  cd repos/cs131/
+  402  ls
+  403  mkdir Assignment1
+  404  cd Assignment1/
+  405  vi Assignment1.txt
+
+Task 2
+  408  echo $SHELL
+
+Task 3 
+  425  cd ~
+  432  echo `pwd` >> repos/cs131/Assignment1/Assignment1.txt 
+
+Task 4
+  439  cd /etc
+  440  ls
+  441  cat passwd
+  442  cd ~/repos/cs131/Assignment1/
+  443  cat /etc/passwd
+  444  cat /etc/passwd | grep jonathan
+  445  cat /etc/passwd | grep jonathansp24 >> Assignment1.txt 
+  446  cat /etc/group | grep jonathansp24
+  447  cat /etc/group | grep jonathansp24 >> Assignment1.txt 
+  
+Task 5 
+  454  mkdir myDir
+  455  ls
+  456  ls -l
+  458  chmod 555 myDir
+  459  ls -l
+  460  cd myDir/
+  461  ls
+  462  ls -l
+  463  touch testFile
+  464  ls -l >> ../Assignment1.txt 
+ 
+Task 6
+  473  mkdir myDir2 myDir3
+  474  ls
+
+Task 7
+  476  touch myDir2/myFile.txt
+  477  ls myDir2
+  478  ls myDir2 >> Assignment1.txt 
+  479  mv myDir2/myFile.txt myDir3/myFile.txt
+  480  ls myDir3 >> Assignment1.txt 
+ 
+Task 8
+  482  free
+  483  man free
+  484  free -m
+  485  free -m >> Assignment1.txt 
+ 
+Task 9 
+  487  ls /etc
+  488  cat /etc/system-release
+  489  cat /etc/system-release >> Assignment1.txt  
+  497  cat /etc/os-release
+  498  cat /etc/os-release >> Assignent1.txt 
+
+Task 10
+  491  ls -l /etc/ | grep system-release 
+  493  ls -l /etc/ | grep system-release >> Assignment1.txt 
+  495  ls /etc/ 
+  499  ls -l /etc/ | grep os-release >> Assignment1.txt 

@@ -1,0 +1,73 @@
+Tasks
+
+1) mkdir Assignment1 creates a directory named Assignment1
+
+2) I used echo $SHELL to find out which shell I use. The output was
+/bin/bash
+
+3) I first moved to the home dirctory with cd ~
+Then I echoed the home directory path using echo `pwd` >> repos/cs131/Assignment1/Assignment1.txt
+The output is 
+/mnt/scratch/SP24_CS131_Jyotika/jonathansp24
+
+4)
+My id is 1206. I found this within the /etc/passwd file.
+jonathansp24:x:1206:1206::/mnt/scratch/SP24_CS131_Jyotika/jonathansp24:/bin/bash
+
+
+The group I belong to is jonathansp24. I am also a part of the S78 group.
+S78:x:78:jaydevsp24,ayesp24,justinsp24,alexsp24,breannasp24,aayushsp24,xiaokesp24,jonathansp24,athishsp24,benjaminsp24,gursimransp24,fnusp24,connersp24,ericsp24,michellesp24,byronsp24,gradysp24,billysp24,nicholsonsp24,gavinsp24,aarushisp24,chih-kuosp24,dylansp24,ronsp24,swansp24,piercesp24,briansp24,sonsp24,daosp24,zakisp24,kobesp24,ajaysp24,nicolesp24,robertsp24,vaikuntamsp24,sheelsp24,amansp24,jyotika
+jonathansp24:x:1206:
+
+5) I can ls inside of myDir, but I cannot create any files under this directory. I do not have permmission to do so. 
+total 0
+
+6) 
+output of ls in Assignment1 directory after creating myDir2 and myDir3 using mkdir myDir2 myDir3
+Assignment1.txt
+myDir
+myDir2
+myDir3
+
+7) 
+Output of ls after creating myFile.txt within myDir2 directory
+myFile.txt
+Output of ls after moving myFile.txt to myDir3 in that directory
+myFile.txt
+
+8)
+Output of free -m to display amount of memory in mebibytes
+
+              total        used        free      shared  buff/cache   available
+Mem:          71367       32329       19917        3561       19120       34018
+Swap:          4119           0        4119
+
+9)
+I found the operating system and versing withing the /etc/system-release file and the os-release file.
+Output from cat system-release
+Red Hat Enterprise Linux release 8.6 (Ootpa)
+
+
+
+output from cat os-release
+NAME="Red Hat Enterprise Linux"
+VERSION="8.6 (Ootpa)"
+ID="rhel"
+ID_LIKE="fedora"
+VERSION_ID="8.6"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="Red Hat Enterprise Linux 8.6 (Ootpa)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:8::baseos"
+HOME_URL="https://www.redhat.com/"
+DOCUMENTATION_URL="https://access.redhat.com/documentation/red_hat_enterprise_linux/8/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 8"
+REDHAT_BUGZILLA_PRODUCT_VERSION=8.6
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="8.6"
+
+
+10) Everyone has rwx access on os-release.
+lrwxrwxrwx.  1 root root       22 Apr  6  2022 os-release -> ..//usr/lib/os-release
