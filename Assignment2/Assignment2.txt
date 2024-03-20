@@ -1,0 +1,84 @@
+Task 1
+a. In this command, we are outputting the result of find /etc -type f into a file called two.txt. find /etc -type f returns all files within the /etc folder. This output then gets put into two.txt
+
+b. Using cat one.txt returns nothing because the file is blank. cat two.txt outputs all of the files within the /etc folder. 
+
+Task 2
+I first made the file organized into columns separated by spaces with these two commands
+sed 's/[[:blank:]]\+/_/g' Global\ YouTube\ Statistics.csv > stats_w_no_spaces.csv
+sed 's/,\+/ /g' stats_w_no_spaces.csv > stats_in_columns.csv
+
+Then I used this awk followed by pipes to sort and get the unique counts of each year month combo
+awk '{print $20, $21}' stats_in_columns.csv | sort -n | uniq -c | sort -n | tail -3 
+     12 2014 Aug
+     13 2014 Jul
+     15 2006 Mar
+
+Task 3
+ps aux | grep jonathan
+root     3818530  0.0  0.0  56064 18432 ?        Ss   13:40   0:00 sshd: jonathansp24 [priv]
+jonatha+ 3818558  0.0  0.0  49408 13312 ?        S    13:40   0:00 sshd: jonathansp24@pts/31
+jonatha+ 3858060  0.0  0.0   8320  1792 pts/31   S+   15:30   0:00 grep --color=auto jonathan
+
+Task 4
+
+part b
+The PID of the vi process is 3912149. 
+
+root     3911404  0.0  0.0  56064 18432 ?        Ss   18:00   0:00 sshd: jonathansp24 [priv]
+jonatha+ 3911422  0.0  0.0  28608 14784 ?        Ss   18:00   0:00 /usr/lib/systemd/systemd --user
+jonatha+ 3911424  0.0  0.0 208640 10944 ?        S    18:00   0:00 (sd-pam)
+jonatha+ 3911431  0.0  0.0  49600 13568 ?        S    18:00   0:00 sshd: jonathansp24@pts/1
+jonatha+ 3911432  0.0  0.0  19840  7872 pts/1    Ss   18:00   0:00 -bash
+root     3911990  0.0  0.0  56064 18432 ?        Ss   18:02   0:00 sshd: jonathansp24 [priv]
+jonatha+ 3912005  0.0  0.0  49280 10368 ?        S    18:02   0:00 sshd: jonathansp24@pts/8
+jonatha+ 3912006  0.0  0.0  19648  6976 pts/8    Ss   18:02   0:00 -bash
+jonatha+ 3912149  0.0  0.0  26240 11840 pts/8    S+   18:02   0:00 vim file.txt
+jonatha+ 3913553  0.0  0.0  25344  8000 pts/1    R+   18:06   0:00 ps aux
+jonatha+ 3913554  0.0  0.0   8320  1792 pts/1    S+   18:06   0:00 grep --color=auto jona
+
+part d
+the vim file.txt process is no longer there
+
+root     3911404  0.0  0.0  56064 18432 ?        Ss   18:00   0:00 sshd: jonathansp24 [priv]
+jonatha+ 3911422  0.0  0.0  28608 14784 ?        Ss   18:00   0:00 /usr/lib/systemd/systemd --user
+jonatha+ 3911424  0.0  0.0 208640 10944 ?        S    18:00   0:00 (sd-pam)
+jonatha+ 3911431  0.0  0.0  49600 13568 ?        S    18:00   0:00 sshd: jonathansp24@pts/1
+jonatha+ 3911432  0.0  0.0  19840  7872 pts/1    Ss   18:00   0:00 -bash
+root     3911990  0.0  0.0  56064 18432 ?        Ss   18:02   0:00 sshd: jonathansp24 [priv]
+jonatha+ 3912005  0.0  0.0  49280 10368 ?        S    18:02   0:00 sshd: jonathansp24@pts/8
+jonatha+ 3912006  0.0  0.0  19648  6976 pts/8    Ss+  18:02   0:00 -bash
+jonatha+ 3914444  0.0  0.0  25344  8000 pts/1    R+   18:09   0:00 ps aux
+jonatha+ 3914445  0.0  0.0   8320  1792 pts/1    S+   18:09   0:00 grep --color=auto jona
+
+Task 5
+The PID for systemd is 1
+
+root           1  0.6  0.0 178624 18432 ?        Ss    2023 849:52 /usr/lib/systemd/systemd --switched-root --system --deserialize 18
+root        2951  0.0  0.3 340224 261824 ?       Ss    2023 121:24 /usr/lib/systemd/systemd-journald
+root        2998  0.0  0.0  56512 15680 ?        Ss    2023   0:08 /usr/lib/systemd/systemd-udevd
+dbus        3706  0.4  0.0  16512 10560 ?        Ss    2023 562:33 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root        3746  0.0  0.0  35776 14208 ?        Ss    2023  93:03 /usr/lib/systemd/systemd-logind
+conners+   86087  0.0  0.0  28736 15168 ?        Ss   Mar13   6:57 /usr/lib/systemd/systemd --user
+gradysp+  105881  0.0  0.0  28736 15168 ?        Ss   Mar13   7:37 /usr/lib/systemd/systemd --user
+justins+ 2060795  0.0  0.0  28736 15168 ?        Ss   Feb22  23:28 /usr/lib/systemd/systemd --user
+jessesp+ 2073814  0.0  0.0  28736 15168 ?        Ss   Feb22  25:22 /usr/lib/systemd/systemd --user
+atishay+ 2248654  0.0  0.0  28736 15168 ?        Ss   Feb08  32:52 /usr/lib/systemd/systemd --user
+hardiks+ 2379540  0.0  0.0  28736 15168 ?        Ss   Feb23  22:48 /usr/lib/systemd/systemd --user
+diyasp24 2422345  0.0  0.0  28736 15232 ?        Ss   Feb09  32:25 /usr/lib/systemd/systemd --user
+sangsp24 2492008  0.0  0.0  28736 15168 ?        Ss   Feb24  22:30 /usr/lib/systemd/systemd --user
+roberts+ 2808486  0.0  0.0  28736 15232 ?        Ss   Mar18   2:23 /usr/lib/systemd/systemd --user
+alexsp24 3304023  0.0  0.0  28736 15168 ?        Ss   Mar11   9:39 /usr/lib/systemd/systemd --user
+jyotika  3312757  0.0  0.0  28736 15168 ?        Ss   Mar11   9:31 /usr/lib/systemd/systemd --user
+edisons+ 3433756  0.0  0.0  28736 15168 ?        Ss   Mar19   1:05 /usr/lib/systemd/systemd --user
+tylerms+ 3523835  0.0  0.0  28736 15232 ?        Ss   Mar19   0:44 /usr/lib/systemd/systemd --user
+yelinsp+ 3827628  0.0  0.0  28736 15168 ?        Ss   14:05   0:12 /usr/lib/systemd/systemd --user
+breanna+ 3847556  0.0  0.0  28736 15168 ?        Ss   15:01   0:08 /usr/lib/systemd/systemd --user
+briansp+ 3851417  0.0  0.0  28672 15104 ?        Ss   15:12   0:09 /usr/lib/systemd/systemd --user
+gursimr+ 3854249  0.0  0.0  28736 15232 ?        Ss   Feb28  19:39 /usr/lib/systemd/systemd --user
+benjami+ 3892044  0.0  0.0  28672 15104 ?        Ss   17:05   0:03 /usr/lib/systemd/systemd --user
+jonatha+ 3911422  0.0  0.0  28608 14784 ?        Ss   18:00   0:00 /usr/lib/systemd/systemd --user
+jonatha+ 3915595  0.0  0.0   8320  1856 pts/1    S+   18:12   0:00 grep --color=auto systemd
+
+Task 6
+ps aux is a command that outputs all of the current processes running on the system. An alternative to ps aux is top, which shows all current processes in real time. 

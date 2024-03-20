@@ -1,0 +1,48 @@
+Creating the Assignment2 directory
+  534  cd repos/cs131/
+  535  ls
+  536  mkdir Assignment2
+  537  cd Assignment
+  538  Assignment2
+  539  cd Assignment2
+  540  touch Assignment2.txt
+
+Running the command in task1
+  541  find /etc -type f > one.txt > two.txt
+  542  find /etc -type f > one.txt > two.txt >> Assignment2.txt 
+  543  cat one.txt 
+  544  cat two.txt 
+  545  find /etc -type f > one.txt > two.txt
+  546  cat one.txt 
+  547  cat two.txt 
+
+Task 2
+Grabbing the file
+  596  wget https://raw.githubusercontent.com/jyotikahp/DemoRepoForCS131/main/Global%20YouTube%20Statistics.csv
+
+Getting rid of all spaces
+  597  sed 's/[[:blank:]]\+/_/g' Global\ YouTube\ Statistics.csv > stats_w_no_spaces.csv
+
+Replacing commas with spaces to have columns
+  599  sed 's/,\+/ /g' stats_w_no_spaces.csv > stats_in_columns.csv
+
+Using awk to print the created year and created month columns, sort them, then get the count of the unique months and years, sort again, and then print the top 3
+  614  awk '{print $20, $21}' stats_in_columns.csv | sort -n | uniq -c | sort -n | tail -3
+  615  awk '{print $20, $21}' stats_in_columns.csv | sort -n | uniq -c | sort -n | tail -3 >> Assignment2.txt 
+
+Task 3 and 4
+  629  ps aux | grep jona
+  630  ps aux | grep jona >> Assignment2.txt 
+  631  vi Assignment2.txt 
+  632  ps aux | grep jona
+  633  vi Assignment2.txt 
+  634  ps aux | grep jona >> Assignment2.txt 
+  635  vi Assignment2.txt 
+
+Task 5
+  636  ps aux | grep systemd
+  637  ps aux | grep systemd >> Assignment2.txt 
+  638  vi Assignment2.txt 
+
+Saving command history into cmds.log 
+  648  history | tail -130 > cmds.log
