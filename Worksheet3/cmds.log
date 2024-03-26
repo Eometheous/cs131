@@ -1,0 +1,8 @@
+Task 1 
+  725  grep 'United_States' stats_in_columns.csv | awk '{print $16, $8}' |  sort -n | tail -1 >> monthly_earnings.txt | grep 'United_Kingdom' stats_in_columns.csv | awk '{print $16, $8}' | sort -n | tail -1 >> monthly_earnings.txt | grep 'India' stats_in_columns.csv | awk '{print $16, $8}' | sort -n | tail -1 >> monthly_earnings.txt
+  726  cat monthly_earnings.txt 
+
+Task 2
+  728  grep 'Sports' stats_in_columns.csv | awk '{print $3, $2, $5}' |  sort -n | tail -1 >> highest_subscribers.txt | grep 'Education' stats_in_columns.csv | awk '{print $3, $2, $5}' | sort -n | tail -1 >> highest_subscribers.txt | grep 'Entertainment' stats_in_columns.csv | awk '{print $3, $2, $5}' | sort -n | tail -1 >> highest_subscribers.txt
+  729  cat highest_subscribers.txt 
+

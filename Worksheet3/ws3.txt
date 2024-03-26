@@ -1,0 +1,11 @@
+Task 1
+The first column is the highest monthly earning channel within the country. The second column is the country.
+2000000 United_Kingdom
+9200000 United_States
+9000000 India
+
+Task2
+The first column is the number of subscribers, the second column is the channel name, and the third column is the category.
+162000000 Cocomelon_-_Nursery_Rhymes Education
+96000000 WWE Sports
+166000000 MrBeast Entertainment
