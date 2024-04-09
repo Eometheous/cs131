@@ -1,0 +1,24 @@
+Task2
+  762  grep 'United_States' stats_in_columns.csv | awk '{print $3}' |  sort -n > Subscribers/United_States
+  763  grep 'India' stats_in_columns.csv | awk '{print $3}' |  sort -n > Subscribers/India
+  764  cat Subscribers/United_States 
+  765  cat Subscribers/India 
+  767  awk '{s+=$1}END{print "ave:",s/NR}' RS=" " Subscribers/United_States > ws4_means.txt
+  768  awk '{s+=$1}END{print "ave:",s/NR}' RS=" " Subscribers/India >> ws4_means.txt
+  769  cat ws4_means.txt 
+  
+Task 3 
+  805  vi grettings.txt 
+  806  sed -i 's/Hello/Hi/g' grettings.txt 
+  809  sed '/Doe/ d' grettings.txt 
+  810  sed -i '/Doe/ d' grettings.txt 
+  819  sed '/!/a (edited)' grettings.txt 
+  820  sed -i '/!/a (edited)' grettings.txt 
+  824  sed '/Hello/s/Michael Johnson/Mike Johnson/g' grettings.txt 
+  825  sed -i '/Hello/s/Michael Johnson/Mike Johnson/g' grettings.txt 
+
+Task1 (my vpn bugged out and for some reason the history put it here)
+  826  alias l='ls -ltr'
+  827  alias w='ls -l | wc'
+  828  l
+  829  w

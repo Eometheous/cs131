@@ -1,0 +1,4 @@
+First line is United_States, second is India.
+The command used was: awk '{s+=$1}END{print "ave:",s/NR}' RS=" " file_name
+ave: 12400000
+ave: 12300000
