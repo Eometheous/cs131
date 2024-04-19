@@ -1,0 +1,73 @@
+Creating the Assignment3 Directory and getting starter files
+  838  cd repos/cs131/
+  839  ls
+  840  mkdir Assignment3
+  841  cd Assignment3
+  842  touch Assignment3.txt
+  843  wget https://raw.githubusercontent.com/jyotikahp/DemoRepoForCS131/main/last.fake
+  844  wget https://raw.githubusercontent.com/jyotikahp/DemoRepoForCS131/main/passwd.fake
+  845  ls
+  846  cat last.fake 
+  847  cat passwd.fake 
+
+Task1
+  849  wc -l last.fake >> Assignment3.txt 
+  850  cat Assignment3.txt 
+  856  grep 'sp24' last.fake 
+  857  grep 'sp24' last.fake > lastsp24.fake
+  858  wc -l lastsp24.fake  >> Assignment3.txt 
+  859  vi Assignment3.txt 
+
+Task2
+  860  grep Sun lastsp24.fake 
+  861  vi task2Awk 
+  874  awk -f task2Awk  lastsp24.fake | uniq
+  875  awk -f task2Awk  lastsp24.fake | uniq >> Assignment3.txt 
+  876  cat task2Awk >> Assignment3.txt 
+  877  vi Assignment3.txt 
+  
+Task3
+  915  vi task3Awk 
+  916  sed -i 's/:/./g' lastsp24.fake 
+  917  awk -f task3Awk  lastsp24.fake | uniq
+  918  grep zakisp24 lastsp24.fake 
+  919  grep swansp24 lastsp24.fake 
+  920  awk -f task3Awk  lastsp24.fake | uniq
+  921  awk -f task3Awk  lastsp24.fake | uniq >> Assignment3.txt 
+  922  cat task3Awk >> Assignment3.txt 
+  923  vi Assignment3.txt 
+  924  cat task3Awk > task4Awk
+
+Task4 
+  930  vi task4Awk 
+  931  awk -f task4Awk  lastsp24.fake | uniq
+  932  awk -f task4Awk  lastsp24.fake | uniq >> Assignment3.txt 
+  933  cat task4Awk >> Assignment3.txt 
+  934  vi Assignment3.txt 
+
+Task5
+  943  awk {print $1} 
+  944  awk {print $1} lastsp24.fake | grep -e '^t' | uniq
+  945  awk '{print $1}' lastsp24.fake | grep -e '^t' | uniq
+  946  awk '{print $1}' lastsp24.fake | grep -e '^t' | uniq >> Assignment3.txt 
+  947  vi Assignment3.txt
+
+Task6 
+  948  head passwd.fake 
+  949  cat passwd.fake 
+  950  vi task6Awk
+  954  sort passwd.fake | awk -f task6Awk 
+  955  sort passwd.fake | awk -f task6Awk >> Assignment3.txt 
+  956  cat task6Awk >> Assignment3.txt 
+  957  vi Assignment3.txt
+
+Task7  
+  961  sed 's/[[:alnum:][:space:]]//g' passwd.fake 
+  962  sed 's/[[:alnum:][:space:]]//g' passwd.fake | sort -u
+  963  sed 's/[[:alnum:][:space:]]//g' passwd.fake | sort -u >> Assignment3.txt 
+  964  vi Assignment3.txt 
+
+
+Printing history
+  966  history | tail -150 
+  967  history | tail -150 > cmds.log

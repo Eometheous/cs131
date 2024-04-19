@@ -1,0 +1,6 @@
+BEGIN { print "Night Owls List:"  }
+{
+	if ($7 >= 23 || $7 <= 4)
+		print $1
+}
+END { print "Night Owls are dope. Please ensure you get enough sleep though." }

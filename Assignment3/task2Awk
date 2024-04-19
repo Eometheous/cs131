@@ -1,0 +1,6 @@
+BEGIN { print "The list of people who worked on Sunday are:" }
+{
+	if ($4 == "Sun")
+		print $1
+}
+END { print "Kudos to these people for putting in the work" }

@@ -1,0 +1,262 @@
+--------------------
+Task1
+--------------------
+
+Line count of original file using wc -l last.fake
+507 last.fake
+
+Line count of only sp24 using wc -l lastsp24.fake
+478 lastsp24.fake
+
+---------------------------------------------
+Task2
+---------------------------------------------
+Getting student names who logged in on Sunday
+
+awk -f task2Awk lastsp24.fake | uniq
+
+The list of people who worked on Sunday are:
+aayushsp24
+akashsp24
+billysp24
+breannasp24
+briansp24
+chih-kuosp24
+fnusp24
+gavinsp24
+megansp24
+michellesp24
+swansp24
+xuebosp24
+Kudos to these people for putting in the work
+
+contents of task2Awk:
+BEGIN { print "The list of people who worked on Sunday are:" }
+{
+	if ($4 == "Sun")
+		print $1
+}
+END { print "Kudos to these people for putting in the work" }
+
+----------------------------------------------------------------
+Task3
+----------------------------------------------------------------
+Getting night owls with
+awk -f task3Awk lastsp24.fake | uniq
+
+Night Owls List:
+aarushisp24
+aayushsp24
+ajaysp24
+akashsp24
+albertsp24
+alexsp24
+amansp24
+athishsp24
+ayesp24
+benjaminsp24
+bennysp24
+billysp24
+brandonsp24
+breannasp24
+briansp24
+chih-kuosp24
+connersp24
+daosp24
+davidsp24
+diyasp24
+dylansp24
+edisonsp24
+ericsp24
+farihasp24
+fnusp24
+gavinsp24
+georgesp24
+gradysp24
+gursimransp24
+jadonsp24
+jaydevsp24
+jessesp24
+jimmysp24
+justinsp24
+khushisp24
+kobesp24
+madhavsp24
+manassp24
+matthewsp24
+maysp24
+megansp24
+michellesp24
+nicholsonsp24
+nicolesp24
+piercesp24
+rickysp24
+robertosp24
+robertsp24
+ronsp24
+sandrasp24
+sangsp24
+sheelsp24
+sunidhisp24
+swansp24
+taliasp24
+tanishasp24
+tylermsp24
+tylersp24
+vaikuntamsp24
+xiaokesp24
+xuebosp24
+yelinsp24
+zakisp24
+Night Owls are dope. Please ensure you get enough sleep though.
+
+Contents of task3Awk
+BEGIN { print "Night Owls List:"  }
+{
+	if ($7 >= 23 || $7 <= 4)
+		print $1
+}
+END { print "Night Owls are dope. Please ensure you get enough sleep though." }
+
+--------------------------------------------------------------------------------
+Task4
+--------------------------------------------------------------------------------
+Getting early birds with
+awk -f task4Awk lastsp24.fake | uniq
+
+Early Birds List:
+aarushisp24
+aayushsp24
+acesp24
+ajaysp24
+akashsp24
+albertsp24
+alexsp24
+amansp24
+athishsp24
+atishaysp24
+ayesp24
+benjaminsp24
+bennysp24
+billysp24
+brandonsp24
+breannasp24
+briansp24
+chih-kuosp24
+connersp24
+daosp24
+davidsp24
+diyasp24
+dylansp24
+edisonsp24
+ericsp24
+farihasp24
+fnusp24
+gavinsp24
+georgesp24
+gradysp24
+gursimransp24
+hardiksp24
+jadonsp24
+jaydevsp24
+jessesp24
+jimmysp24
+jonathansp24
+justinsp24
+kevinsp24
+khushisp24
+kobesp24
+madhavsp24
+manassp24
+matthewsp24
+maysp24
+megansp24
+michellesp24
+nhatsp24
+nicholsonsp24
+nicolesp24
+piercesp24
+pratiksp24
+rickysp24
+robertosp24
+robertsp24
+ronsp24
+sandrasp24
+sangsp24
+sheelsp24
+sunidhisp24
+swansp24
+taliasp24
+tanishasp24
+tylermsp24
+tylersp24
+vaikuntamsp24
+xiaokesp24
+xuebosp24
+yelinsp24
+zakisp24
+Early Birds are dope. Please ensure you get enough sleep though.
+
+Contents of task4Awk
+BEGIN { print "Early Birds List:"  }
+{
+	if ($7 >= 5 || $7 <= 9)
+		print $1
+}
+END { print "Early Birds are dope. Please ensure you get enough sleep though." }
+
+--------------------------------------------------------------------------------
+Task5
+--------------------------------------------------------------------------------
+Getting names that start with t in lastsp24.fake
+awk '{print $1}' lastsp24.fake | grep -e '^t' | uniq >> Assignment3.txt 
+
+taliasp24
+tanishasp24
+tylermsp24
+tylersp24
+
+--------------------------------------------------------------------------------
+Task6
+--------------------------------------------------------------------------------
+Getting all users who start with 'a' and have a uid divisible by 2
+sort passwd.fake | awk -f task6Awk
+
+aayushsp24 1204
+acesp24 1174
+ajay23fa 1030
+ajaysp24 1230
+akashsp24 1190
+alan23fa 1032
+alexsp24 1202
+amansp24 1242
+amreenf23 1150
+angie23fa 1004
+apple23fa 1018
+areebah23fa 1016
+ashish 1240
+ayesp24 1200
+
+Contents of task6Awk
+BEGIN { FS=":" }
+{
+	if (/^a/ && $3 % 2 == 0) 
+		print $1, $3 
+}
+
+--------------------------------------------------------------------------------
+Task7
+--------------------------------------------------------------------------------
+Deleting all letters, numbers, and spaces within passwd.fake
+sed 's/[[:alnum:][:space:]]//g' passwd.fake | sort -u
+
+-::::-:/://
+-:::::///-://
+-:::::///__/-://
+-:::::/://
+::::-:///://
+:::::///://
+:::::///_/://
+:::::///__/://
+::::://://
+:::::/://
