@@ -1,0 +1,16 @@
+  983  mkdir Worksheet5
+  984  cp Assignment2/stats_in_columns.csv Worksheet5/
+  985  cd Worksheet5
+  986  ls
+  987  touch script.sh
+  988  vi script.sh 
+  989  ls -l
+  991  chmod 771 script.sh
+  992  ls -l
+  994  bash script.sh 
+ 1051  vi script.sh
+ 1052  bash script.sh 
+ 1053  ls
+ 1054  cat ws5.txt 
+ 1055  history
+ 1056  history | tail -80 >> cmds.log
